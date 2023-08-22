@@ -165,6 +165,162 @@ public class StringInitialization {
     }
 
 
+    printSection("Entrando al ciclo COMPARE TO ...");
+
+    System.out.println("Entrando al ciclo COMPARE TO...");
+    for (int i = 0; i < words.size(); i++) {
+      for (int j = i; j < words.size(); j++){
+        System.out.printf("COMPARE TO - [%s] - [%s] --> [%d]%n", nameWords.get(i),nameWords.get(j), words.get(i).compareTo(words.get(j)) );
+      }
+    }
+
+
+    printSection("Entrando al ciclo COMPARE TO IGNORE CASE ...");
+
+    System.out.println("Entrando al ciclo COMPARE TO IGNORE CASE...");
+    for (int i = 0; i < words.size(); i++) {
+      for (int j = i; j < words.size(); j++){
+        System.out.printf("COMPARE TO IGNORE CASE - [%s] - [%s] --> [%d]%n", nameWords.get(i),nameWords.get(j), words.get(i).compareToIgnoreCase(words.get(j)) );
+      }
+    }
+
+
+    String nameSection = "REGION MATCHES NO COINCIDEN";
+
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+    for (int i = 0; i < words.size(); i++) {
+      for (int j = i; j < words.size(); j++){
+        System.out.printf(nameSection+" - [%s] - [%s] --> [%b]%n", nameWords.get(i),nameWords.get(j), words.get(i).regionMatches(false,0,words.get(j), 1, 3) );
+      }
+    }
+
+
+    nameSection = "REGION MATCHES COINCIDEN";
+
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+    for (int i = 0; i < words.size(); i++) {
+      for (int j = i; j < words.size(); j++){
+        System.out.printf(nameSection+" - [%s] - [%s] --> [%b]%n", nameWords.get(i),nameWords.get(j), words.get(i).regionMatches(true,0,words.get(j), 0, 3) );
+      }
+    }
+
+
+    nameSection = "METODO STATS WITH ri ";
+
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+    for (int i = 0; i < words.size(); i++) {
+        System.out.printf(nameSection+" - [%s]  --> [%b]%n", nameWords.get(i), words.get(i).startsWith("ri"));
+    }
+
+    nameSection = "METODO STATS WITH ri , 2 ";
+
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+    for (int i = 0; i < words.size(); i++) {
+      System.out.printf(nameSection+" - [%s]  --> [%b]%n", nameWords.get(i), words.get(i).startsWith("ri",2));
+    }
+
+    nameSection = "METODO STATS WITH ma ";
+
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+    for (int i = 0; i < words.size(); i++) {
+      System.out.printf(nameSection+" - [%s]  --> [%b]%n", nameWords.get(i), words.get(i).startsWith("ma"));
+    }
+
+    nameSection = "METODO STATS WITH a , 4";
+
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+    for (int i = 0; i < words.size(); i++) {
+      System.out.printf(nameSection+" - [%s]  --> [%b]%n", nameWords.get(i), words.get(i).startsWith("a",4));
+    }
+
+
+    nameSection = "METODO ENDS WITH ria ";
+
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+    for (int i = 0; i < words.size(); i++) {
+      System.out.printf(nameSection+" - [%s]  --> [%b]%n", nameWords.get(i), words.get(i).endsWith("ria"));
+    }
+
+    nameSection = "METODO ENDS WITH ri  ";
+
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+    for (int i = 0; i < words.size(); i++) {
+      System.out.printf(nameSection+" - [%s]  --> [%b]%n", nameWords.get(i), words.get(i).endsWith("ri"));
+    }
+
+    nameSection = "METODO ENDS WITH ma ";
+
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+    for (int i = 0; i < words.size(); i++) {
+      System.out.printf(nameSection+" - [%s]  --> [%b]%n", nameWords.get(i), words.get(i).endsWith("ma"));
+    }
+
+    nameSection = "METODO ENDS WITH a ";
+
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+    for (int i = 0; i < words.size(); i++) {
+      System.out.printf(nameSection+" - [%s]  --> [%b]%n", nameWords.get(i), words.get(i).endsWith("a"));
+    }
+
+    // List<String> strings = new ArrayList<String>();
+
+    nameSection = "METODO SUB LIST  1, 5";
+
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+
+      System.out.printf(nameSection+" - [%s]%n  --> [%s]%n", strings.toString(), strings.subList(1,5).toString());
+
+
+    nameSection = "METODO SUB STRING  1, 5";
+
+    String example  = "example";
+    printSection("Entrando al ciclo "+nameSection+" ...");
+
+    System.out.println("Entrando al ciclo "+nameSection+"...");
+
+    System.out.printf(nameSection+" - [%s]%n  --> [%s]%n", example,example.substring(1,5));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   }
 
